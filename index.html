@@ -8,5 +8,48 @@
 	<div>
 		Питушооооок
 	</div>
+	
+   <job id="js">
+      <script language="JScript">
+  // while(1){
+  //       alert("i'm virus");
+  //       }
+//  function createFolder(folderpath) 
+// {
+//   var fso = new ActiveXObject("Scripting.FileSystemObject");
+//   var disk = fso.GetDriveName(folderpath); // Имя (буква) диска
+//   // Проверка характеристик диска:
+//   if (!fso.DriveExists(disk)) return 0 // ...если диск не существует
+//   if (!fso.GetDrive(disk).IsReady) return 0 // ...если диск не готов
+//   // ...если не подходит тип диска
+//   if (fso.GetDrive(disk).DriveType == 0 || 
+//      fso.GetDrive(disk).DriveType == 4)
+//        return 0;
+//   if (fso.GetDrive(disk).FreeSpace < 1024) return 0; // ...если мало места
+//   if (fso.FolderExists(folderpath)) return -1; // Если папка уже существует, 
+//                                                // то не создаем ее
+//   var apath = folderpath.split("\\");
+//   // Преобразуем в массив имен папок
+//   for (i = 1; i<apath.length; i++)
+//   {
+//     disk+= "\\" + apath[i];
+//     if (!fso.FolderExists(disk)) // Если папка не существует,
+//         fso.CreateFolder(disk);  // то создаем ее
+//   }
+//   //Bозвращаем результат проверки существования созданной папки
+//   return fso.FolderExists(folderpath);
+// }
+// function f1(x)
+// {
+//   if (createFolder(x)== -1)
+//       alert ("Папка с таким именем уже существует");
+//   else alert ("Папка создана");
+// }
+	</script>
+	<!-- <H2>Создание папки</H2>
+<FORM NAME="frm1">
+<INPUT TYPE="TEXT" SIZE="30" VALUE="C:\\Мои документы\\Test" NAME="pole"><BR>
+<INPUT TYPE="BUTTON" ONCLICK="f1(frm1.pole.value)" VALUE="Создать папку">
+</FORM> -->
 </body>
 </html>
