@@ -1,0 +1,16 @@
+git cd 
+git initgit cd 
+git init
+git cd 
+git init
+git cd 
+git init
+
+git cd 
+git init
+git cd 
+git init
+git cd 
+git init
+git cd 
+git init
