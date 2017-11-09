@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>task1</title>
+  <style>
+  div {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    float: left;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ <div></div>
+ <div></div>
+<script>
+$("div").click(function(){ 
+$("div").css( "border", "2px solid red" )
+  .add( "p" )
+  .css( "background", "green" );
+$( this ).css( "border", "2px solid red" )
+  .add( "p" )
+  .css( "background", "yellow" );
+  });
+$("div").css( "border", "2px solid red" )
+  .add( "p" )
+  .css( "background", "green" );
+</script>
+</body>
+</html>
