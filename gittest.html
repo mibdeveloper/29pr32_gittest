@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+    function table() {
+        document.write("<table border='1'>");
+        var data = ["efasd","asdfasdf","asdfasdf","asdfasd",12,456,574,54,345,3];
+
+        for (var i = 0; i < 10; i++) {
+            document.write("<tr>");
+            for (var j = 0; j < 10; j++) {
+                document.write("<td>" + data[parseInt((Math.random()*100) % data.length)] + "</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    }
+
+    table();
+
+    var elements = document.querySelectorAll('td');
+    for (var i = 0; i < elements.length; i++) {
+        if (isNaN(elements[i].textContent)) {
+
+            elements[i].style.backgroundColor = "green";
+        }
+    }
+    </script>
+</body>
+</html>
+    
