@@ -4,17 +4,58 @@
 	<meta charset="UTF-8">
 	<title>Git test</title>
 	<link rel="stylesheet" href="gittest.css">
+	
 </head>
 <body>
-	<div id="text">DIV 1 TEXT</div>
-  <div>DIV 2 TEXT</div>
-  <div>DIV 3 TEXT</div>
-  <div>DIV 4 TEXT</div>
-  <script>
-  	var dv = document.createElement('div');
-  dv.innerHTML = 'Message text';
-  text.insertBefore(dv, text.firstChild);
-  </script>
+	<div class="cl_d1 moved" id="d1"></div>
+    <div class="cl_d2 moved" id="d2"></div>
+    <div class="cl_d3 moved" id="d3"></div>
+
+    <script type="text/javascript">
+    'use strict';
+    
+    // Events
+    document.body.addEventListener("mousemove", MouseMove);
+    document.body.addEventListener("mouseup", MouseUp);
+
+
+    let objects = document.querySelectorAll(".moved");
+
+    for (var i = 0; i < objects.length; i++) {
+        objects[i].addEventListener( "mousedown", MouseDown);
+    }
+        
+
+    // Global objects
+    var mouse_old = { x: 0, y: 0 };// previous mouse position
+    var object = null;// moved object
+
+
+
+    function MouseDown(e) {
+        mouse_old.x = e.clientX;
+        mouse_old.y = e.clientY;
+        object = e.target;
+    }
+
+    function MouseMove(e) {
+        if (object) {
+            var delta_x = e.clientX - mouse_old.x;
+            var delta_y = e.clientY - mouse_old.y;
+
+           // console.log("Left: " + parseInt(object.style.left) + " Top:" + parseInt(object.style.top));
+
+            object.style.left = object.offsetLeft + delta_x + "px";
+            object.style.top = object.offsetTop + delta_y + "px";
+        }
+        mouse_old.x = e.clientX;
+        mouse_old.y = e.clientY;
+    }
+
+    function MouseUp(e) {
+        object = null;
+    }
+    </script>
 </body>
 </html>
     
